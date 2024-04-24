@@ -63,4 +63,4 @@ def main():
             print(bichinho)
         
 if __name__ == "__main__":
-    main
+    main()
