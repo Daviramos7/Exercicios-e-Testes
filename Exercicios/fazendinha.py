@@ -15,7 +15,7 @@ class Bichinho:
         self.fome -= 1
         if self.fome < 0:
             self.fome = 0
-        print(f"{self.fome} foi alimentado!")
+        print(f"{self.nome} foi alimentado!")
 
     def brincar(self):
         self.tedio -= 1
@@ -28,9 +28,9 @@ class Bichinho:
 
 def main():
     fazenda = [
-        Bichinho("Boris"),
-        Bichinho("Fifi"),
-        Bichinho("Rex"),
+        Bichinho("Lilou"),
+        Bichinho("Lips"),
+        Bichinho("Lindy"),
         Bichinho("Ralph"),
     ]
 
