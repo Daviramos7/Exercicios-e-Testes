@@ -14,24 +14,24 @@ def sortear_numeros(minimo, maximo, quantidade):
 def sorteio_entre_sorteados(numeros_sorteados):
     while len(numeros_sorteados) > 1:
         novo_sorteio = random.sample(numeros_sorteados, 2)
-        numeros_sorteados = [novo_sorteio[0]]  # Mantém apenas um dos sorteados como resultado
+        numeros_sorteados = [novo_sorteio[0]]  
 
     return numeros_sorteados[0]
 
-# Solicitar ao usuário o intervalo mínimo e máximo
+
 minimo = int(input("Digite o valor mínimo do intervalo: "))
 maximo = int(input("Digite o valor máximo do intervalo: "))
 
-# Solicitar ao usuário a quantidade de números a serem sorteados
+
 quantidade = int(input("Digite a quantidade de números a serem sorteados: "))
 
-# Realizar o sorteio inicial
+
 numeros_sorteio, numeros_disponiveis = sortear_numeros(minimo, maximo, quantidade)
 
-# Exibir os números sorteados
+
 print("Números sorteados:", numeros_sorteio)
 
-# Verificar se o usuário deseja realizar o sorteio entre os números já sorteados até sobrar um único número
+
 if len(numeros_sorteio) > 1:
     continuar_sorteando = input("Deseja sortear entre os números já sorteados até sobrar apenas um? (sim/não): ").lower() == "sim"
 
