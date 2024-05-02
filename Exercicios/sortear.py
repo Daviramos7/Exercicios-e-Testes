@@ -37,4 +37,4 @@ if len(numeros_sorteio) > 1:
 
     if continuar_sorteando:
         numero_final = sorteio_entre_sorteados(numeros_sorteio)
-        print(f"Número final após sorteio entre os sorteados: {numero_final}")
+        print(f"O número final sorteado é {numero_final}")
