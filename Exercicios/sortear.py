@@ -1,16 +1,16 @@
 import random
 
 def sortear_numeros():
-    
-    numeros = input("Digite os números separados por espaços: ").split()
-    
-    
-    numeros = [int(num) for num in numeros if num.isdigit()]
-    
-    if not numeros:
-        print("Nenhum número válido foi fornecido.")
+    try:
+        minimo = int(input("Digite o número mínimo do intervalo: "))
+        maximo = int(input("Digite o número máximo do intervalo: "))
+    except ValueError:
+        print("Entrada inválida. Por favor, insira números inteiros válidos.")
         return
     
+    if minimo >= maximo:
+        print("O número mínimo deve ser menor que o número máximo.")
+        return
     
     try:
         quantidade = int(input("Quantos números você deseja sortear? "))
@@ -22,13 +22,13 @@ def sortear_numeros():
         print("A quantidade de números a sortear deve ser maior que zero.")
         return
     
-    if quantidade > len(numeros):
-        print("A quantidade solicitada é maior do que o número de números fornecidos.")
-        return
+    numeros = list(range(minimo, maximo + 1))
     
+    if quantidade > len(numeros):
+        print("A quantidade solicitada é maior do que o número de números no intervalo especificado.")
+        return
     
     numeros_sorteados = random.sample(numeros, quantidade)
     print(f"Números sorteados ({quantidade}):", numeros_sorteados)
-
 
 sortear_numeros()
